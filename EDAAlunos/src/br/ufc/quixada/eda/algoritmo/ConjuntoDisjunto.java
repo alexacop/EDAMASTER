@@ -8,8 +8,8 @@ public class ConjuntoDisjunto {
 
 public ConjuntoDisjunto(int n) {
 	this.n = n;
-	pai = new int[n];
-	ordem = new int[n];
+	pai = new int[n+1];
+	ordem = new int[n+1];
 }
 
 public void Make_set(int i){
@@ -18,7 +18,7 @@ public void Make_set(int i){
 }
 
 public void Make_set_all(){
-	for(int i = 0; i < n; i++)
+	for(int i = 1; i <= n; i++)
 		Make_set(i);
 }
 
