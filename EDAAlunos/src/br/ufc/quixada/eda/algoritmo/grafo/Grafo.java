@@ -3,6 +3,7 @@ package br.ufc.quixada.eda.algoritmo.grafo;
 public class Grafo {
 	private int n,m;
 	private Aresta arestas[] = null;	
+	private ListaAdjacencia adj[];
 
 	public Aresta[] getArestas() {
 		return arestas;
