@@ -6,10 +6,17 @@ import br.ufc.quixada.eda.algoritmo.grafo.ListaAdjacencia;
 import br.ufc.quixada.eda.listaprioridades.HeapMinimo;
 
 public class Dijkstra {
-	private int origem;
+	private int d[] = null; 
 	private int ant[] = null;
+	private int W[][] = null;
+	private double inf = Double.POSITIVE_INFINITY;
+	private int adj[] = null;
 	
-	public void executar(Grafo g){
+	public void relaxamento(int u, int v){
+		Aresta e = new Aresta(u, v, W[u][v]);
+		if(d[v] > e.getPeso() + d[u]){
+			
+	}
 		
 		HeapMinimo Q = new HeapMinimo(g.getQtVertice());
 		Q.contruir(null);
