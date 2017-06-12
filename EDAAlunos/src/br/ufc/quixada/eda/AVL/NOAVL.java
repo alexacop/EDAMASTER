@@ -10,7 +10,7 @@ public class NOAVL<T> {
 		setAltura(1);
 		this.chave = chave;
 	}
-	public int getAltura() {
+	public int getAltura(){
 		return altura;
 	}
 	public void setAltura(int altura) {
