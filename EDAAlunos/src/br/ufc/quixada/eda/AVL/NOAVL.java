@@ -1,8 +1,8 @@
 package br.ufc.quixada.eda.AVL;
 
-public class NOAVL {
-	private NOAVL esq;
-	private NOAVL dir;
+public class NOAVL<T> {
+	private NOAVL<?> esq;
+	private NOAVL<?> dir;
 	private int altura, chave;
 	NOAVL(int chave){
 		esq = null; 
@@ -19,16 +19,16 @@ public class NOAVL {
 	public int getchave() {
 		return chave;
 	}
-	public NOAVL getEsq() {
+	public NOAVL<?> getEsq() {
 		return esq;
 	}
-	public NOAVL getDir() {
+	public NOAVL<?> getDir() {
 		return dir;
 	}
-	public void setDir(NOAVL dir) {
+	public void setDir(NOAVL<?> dir) {
 		this.dir = dir;
 	}
-	public void setEsq(NOAVL esq) {
+	public void setEsq(NOAVL<?> esq) {
 		this.esq = esq;
 	}
 	

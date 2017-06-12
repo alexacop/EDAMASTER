@@ -1,9 +1,9 @@
 package br.ufc.quixada.eda.AVL;
 
 public class AVL {
-	private NOAVL raiz = null;
+	private NOAVL<?> raiz = null;
 
-	private int altura(NOAVL raiz){
+	private int altura(NOAVL<?> raiz){
 		return(raiz != null ? raiz.getAltura() : 0);
 	}
 
@@ -11,12 +11,12 @@ public class AVL {
 		return raiz;
 	}
 
-	public void setRaiz(NOAVL raiz) {
+	public void setRaiz(NOAVL<?> raiz) {
 		this.raiz = raiz;
 	}
 
-	public void rotacaoDireita(NOAVL raiz){
-		NOAVL n, aux;
+	public void rotacaoDireita(NOAVL<?> raiz){
+		NOAVL<?> n, aux;
 		n = raiz.getEsq();
 		aux = n.getDir();
 		n.setDir(raiz);
@@ -24,8 +24,8 @@ public class AVL {
 		raiz = n;
 	}
 
-	public NOAVL rotacaoEsquerda(NOAVL raiz) {
-		NOAVL n, aux;
+	public NOAVL<?> rotacaoEsquerda(NOAVL<?> raiz) {
+		NOAVL<?> n, aux;
 		n = raiz.getDir();
 		aux = n.getEsq();
 		n.setEsq(raiz);
@@ -34,12 +34,12 @@ public class AVL {
 		return raiz;
 	}
 
-	public void rotacaoDuplaDireita(NOAVL raiz){
+	public void rotacaoDuplaDireita(NOAVL<?> raiz){
 		rotacaoDireita(raiz.getDir());
 		rotacaoDireita(raiz);
 	}
 
-	public NOAVL rotacaoDuplaEsquerda(NOAVL raiz){
+	public NOAVL<?> rotacaoDuplaEsquerda(NOAVL<?> raiz){
 		rotacaoEsquerda(raiz.getEsq());
 		return rotacaoEsquerda(raiz);
 	}
@@ -52,7 +52,7 @@ public class AVL {
 	}
 
 	@SuppressWarnings("unused")
-	private NOAVL inserir(NOAVL raiz, int chave) {
+	private NOAVL<?> inserir(NOAVL<?> raiz, int chave) {
 		if(raiz == null){
 			NOAVL no = new NOAVL(chave);
 			return no;

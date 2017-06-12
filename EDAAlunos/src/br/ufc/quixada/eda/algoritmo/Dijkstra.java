@@ -1,4 +1,4 @@
-package br.ufc.quixada.eda.algoritmo;
+/*package br.ufc.quixada.eda.algoritmo;
 
 import br.ufc.quixada.eda.algoritmo.grafo.Aresta;
 import br.ufc.quixada.eda.algoritmo.grafo.Grafo;
@@ -36,3 +36,4 @@ public class Dijkstra {
 	}
 
 }
+*/
