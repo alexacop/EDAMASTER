@@ -54,7 +54,7 @@ public class AVL {
 	@SuppressWarnings("unused")
 	private NOAVL<?> inserir(NOAVL<?> raiz, int chave) {
 		if(raiz == null){
-			NOAVL no = new NOAVL(chave);
+			NOAVL<?> no = new NOAVL<Object>(chave);
 			return no;
 		}else if(raiz.getchave() > chave){
 			raiz.setEsq(inserir(raiz.getEsq(), chave));
